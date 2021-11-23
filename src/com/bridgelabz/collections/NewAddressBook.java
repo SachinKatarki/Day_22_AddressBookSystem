@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class NewAddressBook {
 	Scanner sc = new Scanner(System.in);
+	 ContactDetails person = new ContactDetails();
+
 
     public void addContact() {
         ContactDetails person = new ContactDetails();
@@ -43,8 +45,21 @@ public class NewAddressBook {
 	        else
 	            System.out.println("The Entered First Name Is Not Match");
 	        editContact();
+	        
+	            }
+
+	public void deleteContact() {
+		 System.out.println("Enter firstName of the person");
+	        String editName = sc.nextLine();
+	        if (editName.equals(person.getFirstName())) {
+	            System.out.println("Deleted " + person.getFirstName() + " details");
+	            person = null;
+		
+		
+	       }
+	     }
 	  }
-  }
+  
 	
 		
 	
